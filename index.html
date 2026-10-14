@@ -64,6 +64,11 @@
   </div>
 </div>
 
+<a class="whats" href="https://wa.me/" target="_blank" rel="noopener" aria-label="Fale com a LIARE pelo WhatsApp">
+  <span class="whats__pulse" aria-hidden="true"></span><span class="whats__pulse" aria-hidden="true"></span>
+  <i class="fa-brands fa-whatsapp" aria-hidden="true"></i><span class="whats__label">Fale conosco</span>
+</a>
+
 <header class="hero" id="hero">
   <div class="hero__stage">
     <div class="hero__photo" id="hero-photo">
@@ -95,8 +100,7 @@
       <div class="hero__warm" id="hero-warm"></div>
     </div>
     <div class="hero__overlay" id="hero-overlay"></div>
-    <div class="curtain curtain--l" id="curtain-l"><div class="curtain__shade"></div></div>
-    <div class="curtain curtain--r" id="curtain-r"><div class="curtain__shade"></div></div>
+    <canvas class="curtain" id="curtain" aria-hidden="true"></canvas>
     <div class="hero__glow" id="hero-glow"></div>
     <div class="hero__beam" id="hero-beam"></div>
     <div class="hero__title">
@@ -143,7 +147,7 @@
           <div class="project__info"><h3>Nome do projeto</h3><div>Interiores · Passo Fundo/RS</div></div>
         </div>
       </article>
-      <article class="project" style="--basis:34%;--ratio:3/4;--offset:clamp(0px,9vw,140px);">
+      <article class="project" style="--basis:34%;--ratio:3/4;--offset:clamp(0px,6vw,88px);">
         <div class="project__photo" data-lit>
           <div class="photo">
             <img src="https://images.unsplash.com/photo-1674542572845-7875fa71f1ca?auto=format&fit=crop&w=1200&q=70" alt="Projeto 02, foto vertical" loading="lazy">
@@ -167,7 +171,7 @@
           <div class="project__info"><h3>Nome do projeto</h3><div>Interiores · On-line</div></div>
         </div>
       </article>
-      <article class="project" style="--basis:54%;--ratio:16/10;--offset:clamp(0px,6vw,96px);">
+      <article class="project" style="--basis:54%;--ratio:16/10;--offset:clamp(0px,4vw,60px);">
         <div class="project__photo" data-lit>
           <div class="photo">
             <img src="https://images.unsplash.com/photo-1758915753451-b478b4e6f920?auto=format&fit=crop&w=1600&q=70" alt="Projeto 04, ambiente" loading="lazy">
@@ -239,7 +243,6 @@
 </main>
 
 <footer class="footer">
-  <div class="footer__line" id="foot-line"></div>
   <div class="footer__sign">
     <div class="footer__name">Livia Ribeiro</div>
     <div class="eyebrow">Arquiteta e Urbanista · CAU/RS A327382-2</div>
