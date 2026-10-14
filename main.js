@@ -1,6 +1,5 @@
 (() => {
   const HERO_LENGTH = 200; // vh of scroll the hero occupies on desktop (150 | 200 | 250)
-  const SHOW_DIMMER = true;
   const FOLDS = 11; // pleats per curtain panel
   const SECTIONS = ['sobre', 'projetos', 'servicos', 'processo', 'contato'];
 
@@ -16,7 +15,7 @@
   const mobileMq = matchMedia('(max-width: 767px), (pointer: coarse)');
   let mobile = mobileMq.matches;
 
-  const hero = $('hero'), nav = $('nav'), dimmer = $('dimmer'), toggle = $('nav-toggle');
+  const hero = $('hero'), nav = $('nav'), toggle = $('nav-toggle');
   const photo = $('hero-photo'), cold = $('hero-cold'), warm = $('hero-warm'), overlay = $('hero-overlay');
   const glow = $('hero-glow'), beam = $('hero-beam'), name = $('hero-name'), sub = $('hero-sub'), hint = $('hero-hint');
   const cv = $('curtain'), ctx = cv.getContext('2d');
@@ -38,7 +37,6 @@
   applyModes();
   mobileMq.addEventListener('change', e => { mobile = e.matches; applyModes(); ScrollTrigger.refresh(); });
   toggle.addEventListener('click', () => setMenu(!root.classList.contains('menu-open')));
-  if (!SHOW_DIMMER) dimmer.style.display = 'none';
 
   document.querySelectorAll('[data-go]').forEach(el => el.addEventListener('click', e => {
     e.preventDefault();
@@ -56,17 +54,12 @@
     gsap.to(st, { intro: 0, duration: 3.2, ease: 'power2.out', delay: .2 });
   }
 
-  // ---------- Dimmer: page progress + current section ----------
-  const pct = $('dimmer-pct');
-  gsap.to('#dimmer-fill', {
-    scaleY: 1, ease: 'none',
-    scrollTrigger: {
-      start: 0, end: 'max', scrub: true,
-      onUpdate: self => { pct.textContent = `Luz ${Math.round(self.progress * 100)}%`; }
-    }
-  });
-  const labels = SECTIONS.map(id => document.querySelector(`[data-label="${id}"]`));
-  const setCurrent = cur => labels.forEach((lb, i) => lb.classList.toggle('is-current', i === cur));
+  // ---------- Nav: reading progress + current section ----------
+  gsap.to('#nav-progress', { scaleX: 1, ease: 'none', scrollTrigger: { start: 0, end: 'max', scrub: .3 } });
+  const navLinks = SECTIONS.map(id => document.querySelectorAll(`.nav__links [data-go="${id}"], .menu [data-go="${id}"]`));
+  const setCurrent = cur => navLinks.forEach((els, i) => els.forEach(el => {
+    if (i === cur) el.setAttribute('aria-current', 'location'); else el.removeAttribute('aria-current');
+  }));
   SECTIONS.forEach((id, i) => ScrollTrigger.create({
     trigger: '#' + id, start: 'top 50%',
     onEnter: () => setCurrent(i), onLeaveBack: () => setCurrent(i - 1)
@@ -242,7 +235,6 @@
 
     const open = p > .86;
     nav.classList.toggle('is-open', open);
-    dimmer.classList.toggle('is-open', open);
 
     const haloAmt = (!mobile && !reduced) ? 1 - cl(p / .3) : 0;
     const visible = c < .995 && !reduced;

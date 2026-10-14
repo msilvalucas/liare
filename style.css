@@ -8,7 +8,6 @@
   --sans: 'Jost', sans-serif;
   --pad-x: clamp(20px, 6vw, 96px);
   --hero-h: 200vh;
-  --dim-h: 38vh;
 }
 
 html, body { margin: 0; background: var(--ink); }
@@ -27,7 +26,7 @@ body {
 h1, h2, h3, p { margin: 0; }
 h1, h2, h3 { font-family: var(--serif); font-weight: 300; }
 
-.is-mobile { --hero-h: 150vh; --dim-h: 22vh; }
+.is-mobile { --hero-h: 150vh; }
 .is-reduced { --hero-h: 100vh; }
 
 .eyebrow { font-size: 11px; letter-spacing: .3em; text-transform: uppercase; }
@@ -58,8 +57,19 @@ h1, h2, h3 { font-family: var(--serif); font-weight: 300; }
   display: flex; gap: clamp(14px, 2.4vw, 36px); flex-wrap: wrap; justify-content: flex-end;
   font-size: 11px; letter-spacing: .24em; text-transform: uppercase;
 }
-.nav__links a { color: var(--text); }
-.nav__links a:hover { color: var(--gold); }
+.nav__links a { position: relative; color: var(--text); padding: 6px 0; transition: color .3s ease; }
+.nav__links a::after {
+  content: ''; position: absolute; left: 0; right: .24em; bottom: 0; height: 1px; background: var(--gold);
+  transform: scaleX(0); transform-origin: left; transition: transform .45s ease;
+}
+.nav__links a:hover, .nav__links a[aria-current] { color: var(--gold); }
+.nav__links a:hover::after, .nav__links a[aria-current]::after { transform: scaleX(1); }
+.nav__links a:focus-visible { outline: 1px solid var(--gold); outline-offset: 4px; }
+/* Reading progress along the bottom edge of the bar */
+.nav__progress {
+  position: absolute; left: 0; right: 0; bottom: -1px; height: 2px; background: var(--gold);
+  transform: scaleX(0); transform-origin: left; pointer-events: none;
+}
 .nav__toggle {
   all: unset; cursor: pointer; display: none; align-items: center; gap: 12px;
   min-height: 44px; padding: 0 4px;
@@ -84,29 +94,9 @@ h1, h2, h3 { font-family: var(--serif); font-weight: 300; }
   display: flex; align-items: baseline; gap: 20px; padding: 14px 0 14px 24px; min-height: 44px;
   color: var(--paper); font-family: var(--serif); font-weight: 300; font-size: 44px; line-height: 1;
 }
-.menu a:hover { color: var(--gold); }
+.menu a:hover, .menu a[aria-current] { color: var(--gold); }
 .menu__num { font-family: var(--sans); font-size: 11px; letter-spacing: .24em; color: var(--gold); }
 .menu__foot { margin-top: 40px; padding-left: 24px; font-size: 11px; letter-spacing: .3em; text-transform: uppercase; color: rgba(242, 236, 228, .6); }
-
-/* ---------- Dimmer (scroll progress) ---------- */
-.dimmer {
-  position: fixed; right: clamp(12px, 2vw, 28px); top: 50%; z-index: 40; transform: translateY(-50%);
-  display: flex; flex-direction: column; align-items: flex-end; gap: 14px;
-  opacity: 0; pointer-events: none; transition: opacity .6s ease;
-  font-size: 10px; letter-spacing: .24em; text-transform: uppercase; color: var(--gold);
-}
-.dimmer.is-open { opacity: 1; pointer-events: auto; }
-.dimmer__pct { font-size: 9px; }
-.dimmer__body { position: relative; display: flex; align-items: stretch; gap: 12px; height: var(--dim-h); }
-.dimmer__ticks { display: flex; flex-direction: column; justify-content: space-between; align-items: flex-end; }
-.dimmer__ticks button { all: unset; cursor: pointer; display: flex; align-items: center; gap: 8px; color: var(--gold); }
-.dimmer__ticks button:focus-visible { outline: 1px solid var(--gold); outline-offset: 4px; }
-.dimmer__label { opacity: 0; transition: opacity .3s; font-size: 9px; letter-spacing: .24em; }
-.dimmer__label.is-current { opacity: 1; }
-.is-mobile .dimmer__label { opacity: 0; }
-.dimmer__tick { display: block; width: 8px; height: 1px; background: var(--gold); }
-.dimmer__track { position: relative; width: 1px; background: rgba(184, 154, 106, .25); }
-.dimmer__fill { position: absolute; inset: 0; background: var(--gold); transform-origin: top; transform: scaleY(0); }
 
 /* ---------- Hero ---------- */
 .hero { position: relative; height: var(--hero-h); background: var(--ink); }
