@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>LIARE Arquitetura · Livia Ribeiro · Projetos + Interiores</title>
+<meta name="description" content="LIARE Arquitetura, por Livia Ribeiro. Projetos arquitetônicos e de interiores em Passo Fundo/RS e on-line.">
+<meta name="theme-color" content="#14100D">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300&family=Jost:wght@300;400&display=swap">
+<link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/fontawesome.min.css" crossorigin="anonymous" referrerpolicy="no-referrer">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/brands.min.css" crossorigin="anonymous" referrerpolicy="no-referrer">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/solid.min.css" crossorigin="anonymous" referrerpolicy="no-referrer">
+<link rel="stylesheet" href="style.css">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:site_name" content="LIARE Arquitetura">
+<meta property="og:title" content="LIARE Arquitetura · Livia Ribeiro · Projetos + Interiores">
+<meta property="og:description" content="Projetos arquitetônicos e de interiores em Passo Fundo/RS e on-line.">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"ProfessionalService","name":"LIARE Arquitetura","description":"Projetos arquitetônicos e de interiores em Passo Fundo/RS e on-line.","founder":{"@type":"Person","name":"Livia Ribeiro","jobTitle":"Arquiteta e Urbanista"},"address":{"@type":"PostalAddress","addressLocality":"Passo Fundo","addressRegion":"RS","addressCountry":"BR"},"areaServed":"BR","email":"contato@liare.com.br","sameAs":["https://instagram.com/liare.arquitetura"]}
+</script>
+</head>
+<body>
+
+<nav class="nav" id="nav" aria-label="Principal">
+  <a class="nav__brand" href="#sobre" data-go="sobre">LIARE</a>
+  <div class="nav__links">
+    <a href="#sobre" data-go="sobre">Sobre</a>
+    <a href="#projetos" data-go="projetos">Projetos</a>
+    <a href="#servicos" data-go="servicos">Serviços</a>
+    <a href="#processo" data-go="processo">Processo</a>
+    <a href="#contato" data-go="contato">Contato</a>
+  </div>
+  <button class="nav__toggle" id="nav-toggle" type="button" aria-expanded="false" aria-controls="menu">
+    <span data-menu-label>Menu</span>
+    <span class="nav__bars" aria-hidden="true"><span></span><span></span></span>
+  </button>
+</nav>
+
+<div class="menu" id="menu">
+  <div class="menu__rule"></div>
+  <a href="#sobre" data-go="sobre"><span class="menu__num">01</span><span>Sobre</span></a>
+  <a href="#projetos" data-go="projetos"><span class="menu__num">02</span><span>Projetos</span></a>
+  <a href="#servicos" data-go="servicos"><span class="menu__num">03</span><span>Serviços</span></a>
+  <a href="#processo" data-go="processo"><span class="menu__num">04</span><span>Processo</span></a>
+  <a href="#contato" data-go="contato"><span class="menu__num">05</span><span>Contato</span></a>
+  <div class="menu__foot">Passo Fundo/RS · On-line</div>
+</div>
+
+<div class="dimmer" id="dimmer" aria-hidden="true">
+  <div class="dimmer__pct" id="dimmer-pct">Luz 0%</div>
+  <div class="dimmer__body">
+    <div class="dimmer__ticks">
+      <button type="button" tabindex="-1" data-go="sobre" title="Sobre"><span class="dimmer__label" data-label="sobre">Sobre</span><span class="dimmer__tick"></span></button>
+      <button type="button" tabindex="-1" data-go="projetos" title="Projetos"><span class="dimmer__label" data-label="projetos">Projetos</span><span class="dimmer__tick"></span></button>
+      <button type="button" tabindex="-1" data-go="servicos" title="Serviços"><span class="dimmer__label" data-label="servicos">Serviços</span><span class="dimmer__tick"></span></button>
+      <button type="button" tabindex="-1" data-go="processo" title="Processo"><span class="dimmer__label" data-label="processo">Processo</span><span class="dimmer__tick"></span></button>
+      <button type="button" tabindex="-1" data-go="contato" title="Contato"><span class="dimmer__label" data-label="contato">Contato</span><span class="dimmer__tick"></span></button>
+    </div>
+    <div class="dimmer__track"><div class="dimmer__fill" id="dimmer-fill"></div></div>
+  </div>
+</div>
+
+<header class="hero" id="hero">
+  <div class="hero__stage">
+    <div class="hero__photo" id="hero-photo">
+      <div class="hero__slide is-current">
+        <div class="photo">
+          <img src="https://images.unsplash.com/photo-1758915753369-6a33c7bc1d76?auto=format&fit=crop&w=2000&q=70" alt="Ambiente projetado" fetchpriority="high">
+          <span class="credit">Photo by <a href="https://unsplash.com/@suher90?utm_source=liare&utm_medium=referral" target="_blank" rel="noopener">SUHER DAA</a> on <a href="https://unsplash.com/?utm_source=liare&utm_medium=referral" target="_blank" rel="noopener">Unsplash</a></span>
+        </div>
+      </div>
+      <div class="hero__slide">
+        <div class="photo">
+          <img src="https://images.unsplash.com/photo-1762544968153-b9b47435fefd?auto=format&fit=crop&w=2000&q=70" alt="Ambiente projetado">
+          <span class="credit">Photo by <a href="https://unsplash.com/@claybanks?utm_source=liare&utm_medium=referral" target="_blank" rel="noopener">Clay Banks</a> on <a href="https://unsplash.com/?utm_source=liare&utm_medium=referral" target="_blank" rel="noopener">Unsplash</a></span>
+        </div>
+      </div>
+      <div class="hero__slide">
+        <div class="photo">
+          <img src="https://images.unsplash.com/photo-1682184805271-11671b7ecf4c?auto=format&fit=crop&w=2000&q=70" alt="Ambiente projetado">
+          <span class="credit">Photo by <a href="https://unsplash.com/@bardhplluzhina?utm_source=liare&utm_medium=referral" target="_blank" rel="noopener">Lumbardh Plluzhina</a> on <a href="https://unsplash.com/?utm_source=liare&utm_medium=referral" target="_blank" rel="noopener">Unsplash</a></span>
+        </div>
+      </div>
+      <div class="hero__slide">
+        <div class="photo">
+          <img src="https://images.unsplash.com/photo-1706200234292-66928ea63168?auto=format&fit=crop&w=2000&q=70" alt="Ambiente projetado">
+          <span class="credit">Photo by <a href="https://unsplash.com/@evanthewise?utm_source=liare&utm_medium=referral" target="_blank" rel="noopener">Evan Wise</a> on <a href="https://unsplash.com/?utm_source=liare&utm_medium=referral" target="_blank" rel="noopener">Unsplash</a></span>
+        </div>
+      </div>
+      <div class="hero__cold" id="hero-cold"></div>
+      <div class="hero__warm" id="hero-warm"></div>
+    </div>
+    <div class="hero__overlay" id="hero-overlay"></div>
+    <div class="curtain curtain--l" id="curtain-l"><div class="curtain__shade"></div></div>
+    <div class="curtain curtain--r" id="curtain-r"><div class="curtain__shade"></div></div>
+    <div class="hero__glow" id="hero-glow"></div>
+    <div class="hero__beam" id="hero-beam"></div>
+    <div class="hero__title">
+      <h1 class="hero__name" id="hero-name">Livia Ribeiro</h1>
+      <div class="hero__sub" id="hero-sub">LIARE Arquitetura · Projetos + Interiores</div>
+    </div>
+    <div class="hero__hint" id="hero-hint">role para acender<i class="fa-solid fa-arrow-down" aria-hidden="true"></i></div>
+  </div>
+</header>
+
+<main class="paper">
+
+  <section class="sobre wrap" id="sobre">
+    <div class="sobre__photo" data-lit>
+      <div class="photo">
+        <img src="https://images.unsplash.com/photo-1667312939978-64cf31718a6e?auto=format&fit=crop&w=1200&q=70" alt="Retrato de Livia Ribeiro" loading="lazy">
+        <span class="credit">Photo by <a href="https://unsplash.com/@kaboompics?utm_source=liare&utm_medium=referral" target="_blank" rel="noopener">Karolina Grabowska</a> on <a href="https://unsplash.com/?utm_source=liare&utm_medium=referral" target="_blank" rel="noopener">Unsplash</a></span>
+      </div>
+    </div>
+    <div class="sobre__text">
+      <div class="eyebrow">Sobre</div>
+      <h2>Transformando espaços em ambientes para serem vividos.</h2>
+      <div class="sobre__rule"></div>
+      <p>Livia Ribeiro é arquiteta e urbanista e assina a LIARE Arquitetura, em Passo Fundo/RS. Desenvolve projetos arquitetônicos e de interiores pensados a partir de quem vai habitar cada espaço.</p>
+      <p>O atendimento acontece presencialmente em Passo Fundo e on-line para outras cidades, com o mesmo cuidado em cada etapa, da primeira conversa ao projeto final.</p>
+    </div>
+  </section>
+
+  <section class="projetos wrap" id="projetos">
+    <div class="section-head">
+      <h2>Projetos</h2>
+      <div class="eyebrow">Arquitetura · Interiores</div>
+    </div>
+    <div class="projetos__grid">
+      <article class="project" style="--basis:58%;--ratio:4/3;">
+        <div class="project__photo" data-lit>
+          <div class="photo">
+            <img src="https://images.unsplash.com/photo-1718490476531-2b3b1caab846?auto=format&fit=crop&w=1600&q=70" alt="Projeto 01, foto principal" loading="lazy">
+            <span class="credit">Photo by <a href="https://unsplash.com/@eladepure?utm_source=liare&utm_medium=referral" target="_blank" rel="noopener">Ela De Pure</a> on <a href="https://unsplash.com/?utm_source=liare&utm_medium=referral" target="_blank" rel="noopener">Unsplash</a></span>
+          </div>
+        </div>
+        <div class="project__meta">
+          <span class="num" data-num>01</span>
+          <div class="project__info"><h3>Nome do projeto</h3><div>Interiores · Passo Fundo/RS</div></div>
+        </div>
+      </article>
+      <article class="project" style="--basis:34%;--ratio:3/4;--offset:clamp(0px,9vw,140px);">
+        <div class="project__photo" data-lit>
+          <div class="photo">
+            <img src="https://images.unsplash.com/photo-1674542572845-7875fa71f1ca?auto=format&fit=crop&w=1200&q=70" alt="Projeto 02, foto vertical" loading="lazy">
+            <span class="credit">Photo by <a href="https://unsplash.com/@yoyoand?utm_source=liare&utm_medium=referral" target="_blank" rel="noopener">Zhao Yangyang</a> on <a href="https://unsplash.com/?utm_source=liare&utm_medium=referral" target="_blank" rel="noopener">Unsplash</a></span>
+          </div>
+        </div>
+        <div class="project__meta">
+          <span class="num" data-num>02</span>
+          <div class="project__info"><h3>Nome do projeto</h3><div>Arquitetônico · Passo Fundo/RS</div></div>
+        </div>
+      </article>
+      <article class="project" style="--basis:38%;--ratio:4/5;">
+        <div class="project__photo" data-lit>
+          <div class="photo">
+            <img src="https://images.unsplash.com/photo-1721630175454-0ca4517bb530?auto=format&fit=crop&w=1200&q=70" alt="Projeto 03, detalhe" loading="lazy">
+            <span class="credit">Photo by <a href="https://unsplash.com/@ka_idris?utm_source=liare&utm_medium=referral" target="_blank" rel="noopener">Kam Idris</a> on <a href="https://unsplash.com/?utm_source=liare&utm_medium=referral" target="_blank" rel="noopener">Unsplash</a></span>
+          </div>
+        </div>
+        <div class="project__meta">
+          <span class="num" data-num>03</span>
+          <div class="project__info"><h3>Nome do projeto</h3><div>Interiores · On-line</div></div>
+        </div>
+      </article>
+      <article class="project" style="--basis:54%;--ratio:16/10;--offset:clamp(0px,6vw,96px);">
+        <div class="project__photo" data-lit>
+          <div class="photo">
+            <img src="https://images.unsplash.com/photo-1758915753451-b478b4e6f920?auto=format&fit=crop&w=1600&q=70" alt="Projeto 04, ambiente" loading="lazy">
+            <span class="credit">Photo by <a href="https://unsplash.com/@suher90?utm_source=liare&utm_medium=referral" target="_blank" rel="noopener">SUHER DAA</a> on <a href="https://unsplash.com/?utm_source=liare&utm_medium=referral" target="_blank" rel="noopener">Unsplash</a></span>
+          </div>
+        </div>
+        <div class="project__meta">
+          <span class="num" data-num>04</span>
+          <div class="project__info"><h3>Nome do projeto</h3><div>Arquitetônico · Passo Fundo/RS</div></div>
+        </div>
+      </article>
+      <article class="project" style="--basis:68%;--ratio:21/9;--ml:auto;">
+        <div class="project__photo" data-lit>
+          <div class="photo">
+            <img src="https://images.unsplash.com/photo-1631630259742-c0f0b17c6c10?auto=format&fit=crop&w=2000&q=70" alt="Projeto 05, panorâmica" loading="lazy">
+            <span class="credit">Photo by <a href="https://unsplash.com/@hansphoto?utm_source=liare&utm_medium=referral" target="_blank" rel="noopener">Hans</a> on <a href="https://unsplash.com/?utm_source=liare&utm_medium=referral" target="_blank" rel="noopener">Unsplash</a></span>
+          </div>
+        </div>
+        <div class="project__meta">
+          <span class="num" data-num>05</span>
+          <div class="project__info"><h3>Nome do projeto</h3><div>Interiores · Passo Fundo/RS</div></div>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section class="servicos wrap" id="servicos">
+    <div class="servicos__head">
+      <div class="eyebrow">Serviços</div>
+      <h2>O que a LIARE faz</h2>
+    </div>
+    <div class="servicos__list">
+      <div class="service"><h3>Projeto arquitetônico</h3><p>Estudo, anteprojeto e projeto executivo para construções novas e reformas.</p></div>
+      <div class="service"><h3>Projeto de interiores</h3><p>Layout, materiais, iluminação e marcenaria para ambientes residenciais e comerciais.</p></div>
+      <div class="service"><h3>Projeto on-line</h3><p>O mesmo processo, com reuniões por vídeo e entrega digital, para qualquer cidade.</p></div>
+      <div class="service"><h3>Atendimento presencial</h3><p>Visitas e reuniões em Passo Fundo/RS e região.</p></div>
+    </div>
+  </section>
+
+  <section class="processo wrap" id="processo">
+    <div class="section-head">
+      <h2>Processo</h2>
+      <div class="eyebrow">Em quatro etapas</div>
+    </div>
+    <div class="processo__grid">
+      <div class="step"><span class="num" data-num>01</span><h3>Conversa inicial</h3><p>Entendimento da rotina, das necessidades e do espaço existente.</p></div>
+      <div class="step"><span class="num" data-num>02</span><h3>Estudo preliminar</h3><p>Primeiras soluções de layout e conceito, apresentadas para ajustes.</p></div>
+      <div class="step"><span class="num" data-num>03</span><h3>Projeto</h3><p>Desenvolvimento completo com materiais, iluminação e imagens do ambiente.</p></div>
+      <div class="step"><span class="num" data-num>04</span><h3>Detalhamento e entrega</h3><p>Pranchas técnicas e orientações para a execução da obra.</p></div>
+    </div>
+  </section>
+
+  <section class="contato" id="contato">
+    <div class="contato__dark" id="contato-dark"></div>
+    <div class="contato__inner" id="contato-inner">
+      <div class="contato__lead">
+        <div class="eyebrow">Contato</div>
+        <h2>Vamos conversar sobre o seu espaço.</h2>
+        <p>Atendimento presencial em Passo Fundo/RS e on-line.</p>
+      </div>
+      <div class="contato__list">
+        <a class="contact" href="https://wa.me/" target="_blank" rel="noopener"><span class="eyebrow"><i class="fa-brands fa-whatsapp" aria-hidden="true"></i>WhatsApp</span><span class="contact__value">(54) 0000-0000</span></a>
+        <a class="contact" href="mailto:contato@liare.com.br"><span class="eyebrow"><i class="fa-solid fa-envelope" aria-hidden="true"></i>E-mail</span><span class="contact__value">contato@liare.com.br</span></a>
+        <a class="contact" href="https://instagram.com/liare.arquitetura" target="_blank" rel="noopener"><span class="eyebrow"><i class="fa-brands fa-instagram" aria-hidden="true"></i>Instagram</span><span class="contact__value">@liare.arquitetura</span></a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="footer__line" id="foot-line"></div>
+  <div class="footer__sign">
+    <div class="footer__name">Livia Ribeiro</div>
+    <div class="eyebrow">Arquiteta e Urbanista · CAU/RS A327382-2</div>
+  </div>
+  <div class="footer__base">
+    <span>LIARE Arquitetura · Passo Fundo/RS</span>
+    <a href="https://instagram.com/liare.arquitetura" target="_blank" rel="noopener"><i class="fa-brands fa-instagram" aria-hidden="true"></i>@liare.arquitetura</a>
+  </div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" crossorigin="anonymous" referrerpolicy="no-referrer" defer></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" crossorigin="anonymous" referrerpolicy="no-referrer" defer></script>
+<script src="main.js" defer></script>
+</body>
+</html>
